@@ -247,11 +247,11 @@ int main (int argc, char **argv)
             // TODO : apply bandwidth-dependent gain
             for (i=0; i<n_read/2; i++) {
                     // grab sample from usrp buffer
-                    complex float usrp_sample = normalizer_normalize(norm, *((uint16_t*)buffer+i));
+                    complex float rtlsdr_sample = normalizer_normalize(norm, *((uint16_t*)buffer+i));
 
                     // push through resampler (one at a time)
                     unsigned int nw;
-                    msresamp_crcf_execute(resamp, &usrp_sample, 1, buffer_resamp, &nw);
+                    msresamp_crcf_execute(resamp, &rtlsdr_sample, 1, buffer_resamp, &nw);
 
                     // push resulting samples into asgram object
                     asgram_push(q, buffer_resamp, nw);
