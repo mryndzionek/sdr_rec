@@ -39,7 +39,7 @@
 
 #define DEFAULT_SAMPLE_RATE		2048000
 #define DEFAULT_ASYNC_BUF_NUMBER	32
-#define DEFAULT_BUF_LENGTH		(16 * 16384)
+#define DEFAULT_BUF_LENGTH		(1 * 16384)
 #define MINIMAL_BUF_LENGTH		512
 #define MAXIMAL_BUF_LENGTH		(256 * 16384)
 
@@ -220,7 +220,7 @@ int main (int argc, char **argv)
 
     // create buffer for arbitrary resamper output
     complex float buffer_resamp[(int)(2.0f/rx_resamp_rate) + 64];
-    debug("%d", (int)(2.0f/rx_resamp_rate) + 64);
+    debug("resamp_buffer_len: %d", (int)(2.0f/rx_resamp_rate) + 64);
 
     // timer to control asgram output
     timer t1 = timer_create();
