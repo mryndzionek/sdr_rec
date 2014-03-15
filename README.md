@@ -1,5 +1,5 @@
-RTL-SDR and liquid-dsp library - examples
-=========================================
+RTL-SDR and liquid-dsp library - examples and tests
+===================================================
 
 Configuration and build process
 -------------------------------
