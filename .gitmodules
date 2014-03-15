@@ -1,0 +1,6 @@
+[submodule "external/rtl-sdr"]
+	path = external/rtl-sdr
+	url = git://git.osmocom.org/rtl-sdr
+[submodule "external/liquid-dsp"]
+	path = external/liquid-dsp
+	url = https://github.com/jgaeddert/liquid-dsp.git

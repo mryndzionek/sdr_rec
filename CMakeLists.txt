@@ -54,10 +54,10 @@ include_directories (
 )
 
 add_executable (
-    sdr_rec
+    rtl_asgram
     ${SOURCES_}
 )
-target_link_libraries(sdr_rec ${LIQUID} ${RTLSDR} fftw3f usb-1.0 m)
+target_link_libraries(rtl_asgram ${LIQUID} ${RTLSDR} fftw3f usb-1.0 m)
 
 install (
     FILES ${SOURCES_files_Header_Files} DESTINATION include

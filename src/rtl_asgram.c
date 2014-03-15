@@ -44,7 +44,7 @@
 #define MAXIMAL_BUF_LENGTH		(256 * 16384)
 
 void usage() {
-	printf("Usage: asgram_rx [OPTION]\n");
+	printf("Usage: rtl_asgram [OPTION]\n");
 	printf("Run receiver, printing ascii spectrogram periodically\n");
 	printf("\n");
 	printf("  h     : help\n");
