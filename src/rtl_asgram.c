@@ -50,6 +50,7 @@ void usage() {
     printf("  h     : help\n");
     printf("  f     : center frequency [Hz], default: 100 MHz\n");
     printf("  b     : bandwidth [Hz],        default: 800 kHz\n");
+    printf("  B     : output_block_size      default: 16 * 16384\n");
     printf("  G     : gain [dB],             default:  0 = auto\n");
     printf("  p     : ppm_error,             default:  0\n");
     printf("  n     : FFT size,              default:  64\n");
@@ -103,11 +104,12 @@ int main (int argc, char **argv)
 
     //
     int d;
-    while ((d = getopt(argc,argv,"hf:b:G:n:p:s:o:r:L:F:")) != EOF) {
+    while ((d = getopt(argc,argv,"hf:b:B:G:n:p:s:o:r:L:F:")) != EOF) {
             switch (d) {
                 case 'h':   usage();                    return 0;
                 case 'f':   frequency   = atof(optarg); break;
                 case 'b':   bandwidth   = atof(optarg); break;
+                case 'B':   out_block_size = (uint32_t)atof(optarg); break;
                 case 'G':   gain = (int)(atof(optarg) * 10); break;
                 case 'n':   nfft        = atoi(optarg); break;
                 case 'o':   offset      = atof(optarg); break;
