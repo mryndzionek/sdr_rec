@@ -1,7 +1,6 @@
 /*  =========================================================================
     rtl_asgram.h
     
-    Generated parser for sdr_rec_opts
     -------------------------------------------------------------------------
     Copyright (c) 2013 Mariusz Ryndzionek - mryndzionek@gmail.com           
                                                                             
@@ -22,10 +21,6 @@
 
 #ifndef __RTL_ASGRAM_H_INCLUDED__
 #define __RTL_ASGRAM_H_INCLUDED__
-
-/*  These are the sdr_rec_opts parameters
-        -h | --help - Print usage info - type bool
-*/
 
 #ifdef __cplusplus
 extern "C" {
