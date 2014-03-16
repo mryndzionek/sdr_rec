@@ -175,11 +175,11 @@ int main (int argc, char **argv)
 
     printf("frequency       :   %10.4f [MHz]\n", frequency*1e-6f);
     printf("bandwidth       :   %10.4f [kHz]\n", bandwidth*1e-3f);
-    printf("sample rate:   %10.4f kHz = %10.4f kHz * %8.6f\n",
+    printf("sample rate     :   %10.4f kHz = %10.4f kHz * %8.6f\n",
            samp_rate * 1e-3f,
            bandwidth    * 1e-3f,
            1.0f / rx_resamp_rate);
-    printf("verbosity       :   %s\n", (verbose?"enabled":"disabled"));
+    printf("verbosity       :    %s\n", (verbose?"enabled":"disabled"));
 
     unsigned int i;
 
@@ -306,6 +306,7 @@ int main (int argc, char **argv)
     }
 
     // destroy objects
+    normalizer_destroy(&norm);
     msresamp_crcf_destroy(resamp);
     windowcf_destroy(log);
     asgram_destroy(q);
