@@ -44,7 +44,7 @@ Implemented examples
   		p     : ppm_error,             default:  0
   		n     : FFT size,              default:  64
   		o     : offset                 default: -65 dB
-  		s     : samplerate,            default: 2048000 Hz)]
+  		s     : samplerate,            default: 2048000 Hz
   		r     : FFT rate [Hz],         default:   10 Hz
  		L     : output file log size,  default: 4096 samples
   		F     : output filename,       default: 'asgram_rx.dat'
