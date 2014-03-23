@@ -50,7 +50,7 @@ void usage() {
     printf("  h     : help\n");
     printf("  f     : center frequency [Hz], default: 100 MHz\n");
     printf("  b     : bandwidth [Hz],        default: 800 kHz\n");
-    printf("  B     : output_block_size      default: 16 * 16384\n");
+    printf("  B     : output_block_size      default: 1 * 16384\n");
     printf("  G     : gain [dB],             default:  0 = auto\n");
     printf("  p     : ppm_error,             default:  0\n");
     printf("  n     : FFT size,              default:  64\n");
@@ -58,7 +58,7 @@ void usage() {
     printf("  s     : samplerate,            default: 2048000 Hz)]\n");
     printf("  r     : FFT rate [Hz],         default:   10 Hz\n");
     printf("  L     : output file log size,  default: 4096 samples\n");
-    printf("  F     : output filename,       default: 'asgram_rx.dat'\n");
+    printf("  F     : output filename,       default: 'rtl_asgram.dat'\n");
     printf("  d     : device_index,          default: 0\n");
 }
 

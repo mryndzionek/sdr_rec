@@ -48,7 +48,7 @@ Implemented examples
   		s     : samplerate,            default: 2048000 Hz
   		r     : FFT rate [Hz],         default:   10 Hz
  		L     : output file log size,  default: 4096 samples
-  		F     : output filename,       default: 'asgram_rx.dat'
+  		F     : output filename,       default: 'rtl_asgram.dat'
   		d     : device_index,          default: 0
 
 ![ISM_asgram](images/433_ISM_asgram.png?raw=true "433 MHz ISM asgram")
