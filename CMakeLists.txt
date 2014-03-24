@@ -1,7 +1,3 @@
-#################################################################
-#   GENERATED SOURCE CODE, DO NOT EDIT EXCEPT EXPERIMENTALLY    #
-#################################################################
-
 cmake_minimum_required (VERSION 2.8)
 
 project (sdr_rec C)
@@ -11,9 +7,7 @@ set(SDR_REC_VERSION "0.0.0")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lm -lc")
 
 set (SOURCES_files_Source_Files
-    src/rtl_asgram.c
     src/normalizer.c
-    src/timer.c
 	external/rtl-sdr/src/convenience/convenience.c
 )
 source_group ("Source Files" FILES ${SOURCES_files_Source_Files})
@@ -24,6 +18,7 @@ set (SOURCES_Source_Files
 
 set (SOURCES_files_Header_Files
     include/rtl_asgram.h
+    include/rtl_demod.h
     include/normalizer.h
     include/debug.h
     include/timer.h
@@ -56,13 +51,18 @@ include_directories (
 add_executable (
     rtl_asgram
     ${SOURCES_}
+    src/rtl_asgram.c
+    src/timer.c
 )
 target_link_libraries(rtl_asgram ${LIQUID} ${RTLSDR} fftw3f usb-1.0 m)
+
+add_executable (
+    rtl_demod
+    ${SOURCES_}
+    src/rtl_demod.c
+)
+target_link_libraries(rtl_demod ${LIQUID} ${RTLSDR} fftw3f usb-1.0 m)
 
 install (
     FILES ${SOURCES_files_Header_Files} DESTINATION include
 )
-
-#################################################################
-#   GENERATED SOURCE CODE, DO NOT EDIT EXCEPT EXPERIMENTALLY    #
-#################################################################
