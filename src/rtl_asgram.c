@@ -219,8 +219,9 @@ int main (int argc, char **argv)
     assert(buffer);
 
     // create buffer for arbitrary resamper output
-    complex float buffer_resamp[(int)(2.0f/rx_resamp_rate) + 64];
-    debug("resamp_buffer_len: %d", (int)(2.0f/rx_resamp_rate) + 64);
+    int b_len = ((int)(out_block_size * rx_resamp_rate) + 64) >> 1;
+    complex float buffer_resamp[b_len];
+    debug("resamp_buffer_len: %d", b_len);
 
     // timer to control asgram output
     timer t1 = timer_create();

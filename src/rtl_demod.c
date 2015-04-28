@@ -187,9 +187,10 @@ int main (int argc, char **argv)
     assert(buffer_norm);
 
     // create buffer for arbitrary resamper output
-    complex float buffer_resamp[(int)(2.0f/rx_resamp_rate) + 64];
-    int16_t buffer_demod[(int)(2.0f/rx_resamp_rate) + 64];
-    debug("resamp_buffer_len: %d", (int)(2.0f/rx_resamp_rate) + 64);
+    int b_len = ((int)(out_block_size * rx_resamp_rate) + 64) >> 1;
+    complex float buffer_resamp[b_len];
+    int16_t buffer_demod[b_len];
+    debug("resamp_buffer_len: %d\n", b_len);
 
     norm = normalizer_create();
 
