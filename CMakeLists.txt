@@ -35,8 +35,8 @@ set (SOURCES_
   ${SOURCES_Header_Files}
 )
 
-find_library(LIQUID NAMES libliquid.a liquid PATHS external/liquid-dsp/build/lib)
-find_library(RTLSDR NAMES librtlsdr.a rtlsdr PATHS external/rtl-sdr/build/lib)
+find_library(LIQUID NAMES libliquid.a liquid PATHS external/liquid-dsp/build/lib NO_DEFAULT_PATH)
+find_library(RTLSDR NAMES librtlsdr.a rtlsdr PATHS external/rtl-sdr/build/lib NO_DEFAULT_PATH)
 
 include_directories (
   include
