@@ -103,7 +103,6 @@ int main (int argc, char **argv)
     normalizer_t *norm;
 
     float kf = 0.1f;                    // modulation factor
-    liquid_freqdem_type type = LIQUID_FREQDEM_DELAYCONJ;
 
     //
     int d;
@@ -196,7 +195,7 @@ int main (int argc, char **argv)
 
     verbose_reset_buffer(dev);
 
-    freqdem dem = freqdem_create(kf,type);
+    freqdem dem = freqdem_create(kf);
 
     while (!do_exit) {
             // grab data from device
